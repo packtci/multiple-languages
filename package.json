@@ -1,0 +1,23 @@
+{
+  "name": "multiple-languages",
+  "version": "1.0.0",
+  "description": "A repo with multiple languages in travis yml script",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape average.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packtci/multiple-languages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/packtci/multiple-languages/issues"
+  },
+  "homepage": "https://github.com/packtci/multiple-languages#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
+}
