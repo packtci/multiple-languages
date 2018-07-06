@@ -4,7 +4,7 @@
   "description": "A repo with multiple languages in travis yml script",
   "main": "index.js",
   "scripts": {
-    "test": "tape average.test.js"
+    "test": "tape *.test.js"
   },
   "repository": {
     "type": "git",
