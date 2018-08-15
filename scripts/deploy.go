@@ -1,4 +1,4 @@
-package deploy
+package main
 
 import (
 	"bytes"
@@ -65,7 +65,7 @@ func main() {
 
 	req, err := http.NewRequest(
 		"POST",
-		"https://api.github.com/repos/packci/multiple-languages/releases",
+		"https://api.github.com/repos/packtci/multiple-languages/releases",
 		bytes.NewBuffer(postBody),
 	)
 	req.Header.Set("Content-Type", "application/json")
@@ -77,6 +77,9 @@ func main() {
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Fatalln(err)
+	}
+	if resp.StatusCode != http.StatusCreated {
+		log.Fatalln("Should receive a status code of 201 created")
 	}
 
 	var result map[string]interface{}
